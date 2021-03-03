@@ -1,6 +1,6 @@
 {
   "name": "vanilla-prism",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "types": "lib/index.ts",
   "main": "es/index.js",
