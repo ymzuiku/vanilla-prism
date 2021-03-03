@@ -10,6 +10,7 @@ vanilla prism 是一个简易使用 prismjs 的库
 import { usePrismTheme, Prism } from "vanilla-prism";
 
 // 可用主题：
+// "gitbook"
 // "solarized"
 // "tomorrow"
 // "coy"

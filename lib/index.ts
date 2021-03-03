@@ -1,6 +1,7 @@
 import "./prism";
 
 export type PrismTheme =
+  | "gitbook"
   | "solarized"
   | "tomorrow"
   | "coy"
@@ -23,7 +24,9 @@ export const usePrismTheme = (theme: PrismTheme) => {
     sty.id = "prism-theme";
     document.head.appendChild(sty);
   };
-  if (theme === "solarized") {
+  if (theme === "gitbook") {
+    import("./theme/gitbook").then(cb);
+  } else if (theme === "solarized") {
     import("./theme/solarized").then(cb);
   } else if (theme === "tomorrow") {
     import("./theme/tomorrow").then(cb);
@@ -79,6 +82,5 @@ interface IPrism {
 }
 
 const Prism = (window as any).Prism as IPrism;
-console.log(Prism);
 
 export { Prism };
